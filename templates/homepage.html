@@ -1,0 +1,22 @@
+
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}HomePage{% endblock title %}
+{% block content %}
+<div class="col-md-6">
+<p class="promo-title">ENHANCING THE EXPERIENCE</p>
+<p>
+    Chatbots represent a potential shift in how people interact with data and services online. While there is currently a surge of interest in chatbot 
+    design and development, we lack knowledge about why people use chatbots
+</p>
+{% if user.is_authenticated %}
+<a href="{% url 'chatroom' %}" class="btn btn-primary">CHATBOT</a>
+{% else %}
+<a href="{% url 'login' %}" class="login">LOGIN</a>&nbsp    |    &nbsp<a href="{% url 'register' %}" class="register">REGISTER</a>
+&nbsp   <a>Please Login or Register to Continue</a>
+{%endif%}
+</div>
+<div class="col-md-6 text-center">
+    <img src="{%static 'images/rightside.png'%}" class="img-fluid">
+</div>
+{% endblock %}

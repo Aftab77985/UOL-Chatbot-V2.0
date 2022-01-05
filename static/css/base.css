@@ -1,0 +1,79 @@
+*
+{
+    margin : 0;
+    padding: 0;
+}
+body 
+{
+    font-family: sans-serif;
+}
+#nav-bar
+{
+    position: sticky;
+    top: 0;
+    z-index: 10;
+
+}
+.navbar{
+    background-image: linear-gradient(to right,#a517ba,#5f1782);
+    padding: 0 !important;
+}
+.navbar-brand img 
+{
+    height: 40px;
+    padding-left: 20px; 
+}
+.navbar-nav li 
+{
+    padding: 0 10px;
+}
+.navbar-nav li a 
+{
+    color: #fff !important;
+    font-weight: 600;
+    float:right;
+    text-align: right;
+}
+.fa-bars
+{
+    color: white;
+    font-size: 30px !important;
+}
+.navbar-toggler
+{
+    outline: none !important;
+}
+#banner 
+{
+    background-image: linear-gradient(to right,#a517ba,#5f1782);
+    color: white;
+    padding-top: 5%;
+}
+.bottom-img
+{
+    width: 100%;
+}
+.promo-title
+{
+    font-size: 40px;
+    font-weight: 600;
+    margin-top: 100px;
+}
+
+#banner a
+{
+    color: white;
+    text-decoration: none;
+}
+.login
+{
+font-weight: 600;
+font-size: 18px;
+color: black !important;
+}
+.register
+{
+font-weight: 600;
+font-size: 18px;
+color: black !important;
+}

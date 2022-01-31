@@ -1,6 +1,24 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block title %}Chat Room{% endblock %}
 {% block content %}
+<div class="col-md-6 text-center">
+    <img src="{%static 'images/home2.png'%}" class="img-fluid">
+</div>
+<div class="col-md-6 " >
+    <p class="promo-title">UOL CHATBOT</p>
+<p>
+    The university requires a system that can provide quick and accurate responses to user’s
+specific questions from university officials. We believe developing an application
+that can handle user questions automatically by understanding the intent of the question is
+the best way to resolve the problem.<br> <b>PLEASE CLICK ON THE ICON BELOW TO GET STARTED</b>
+</p>
+<style>
+    .rw-conversation-container .rw-header{background-color:hsl(250, 69%, 61%);}
+    .rw-conversation-container .rw-messages-container .rw-message .rw-client{background-color: hsl(250, 69%, 61%);}
+    .rw-launcher{background-color: hsl(250, 69%, 61%);}
+</style>
+
 <script>!(function () {
     let e = document.createElement("script"),
       t = document.head || document.getElementsByTagName("head")[0];
@@ -12,16 +30,18 @@
         window.WebChat.default(
           {
             customData: { language: "en" },
+            
             socketUrl: "https://rasa-server-aftab77985.cloud.okteto.net",
+            title: 'UOL ChatBot',
+            subtitle: '',
             showFullScreenButton: true,
             showMessageDate: true,
-
+            hideWhenNotConnected: false,
             params: {
-                storage: 'session',
-                
+                storage: 'session'
             },
             
-            // add other props here
+            
           },
           null
         );
@@ -29,6 +49,8 @@
       t.insertBefore(e, t.firstChild);
   })();
   </script>
+</div>
+
 <!-- <header class="header">
   <p class="title">Chat with UOL chatbot</p>
 </header>
